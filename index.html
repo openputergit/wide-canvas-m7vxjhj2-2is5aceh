@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H Plus Salon - Premium Beauty & Grooming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-playfair font-bold text-teal-600">H Plus Salon</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#services" class="text-gray-600 hover:text-teal-600">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-teal-600">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-teal-600">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white p-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-teal-600">Services</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-teal-600">About</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-teal-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-playfair font-bold mb-4">Welcome to H Plus Salon</h1>
+            <p class="text-xl mb-8">Your Premium Beauty and Grooming Destination</p>
+            <a href="#book" class="bg-white text-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition duration-300">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Haircut Service -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-scissors text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Haircut & Styling</h3>
+                    <p class="text-gray-600 mb-4">Professional cuts and styling for all hair types</p>
+                    <p class="text-2xl font-bold text-teal-600">₹200</p>
+                </div>
+
+                <!-- Color Service -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-palette text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Hair Coloring</h3>
+                    <p class="text-gray-600 mb-4">Full color, highlights, and balayage</p>
+                    <p class="text-2xl font-bold text-teal-600">₹85+</p>
+                </div>
+
+                <!-- Hair Spa Service -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-water text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Hair Spa</h3>
+                    <p class="text-gray-600 mb-4">Luxurious hair spa and relaxation treatment</p>
+                    <p class="text-2xl font-bold text-teal-600">₹300</p>
+                </div>
+
+                <!-- Beard Shaving Service -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-cart text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Beard Shaving</h3>
+                    <p class="text-gray-600 mb-4">Professional beard grooming and shaving</p>
+                    <p class="text-2xl font-bold text-teal-600">₹70</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="bg-teal-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-8">Book an Appointment</h2>
+            <form class="max-w-md mx-auto">
+                <div class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <input type="email" placeholder="Email Address" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <select class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        <option value="">Select Service</option>
+                        <option value="haircut">Haircut & Styling</option>
+                        <option value="color">Hair Coloring</option>
+                        <option value="spa">Hair Spa</option>
+                        <option value="beard">Beard Shaving</option>
+                    </select>
+                    <input type="date" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <button type="submit" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition duration-300">
+                        Book Now
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">H Plus Salon</h3>
+                    <p class="text-gray-300">Your premium beauty destination</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-300">123 Salon Street</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <p class="text-gray-300">Mon-Fri: 9:00 AM - 8:00 PM</p>
+                    <p class="text-gray-300">Sat-Sun: 10:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-700">
+                <p>&copy; 2023 H Plus Salon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for booking! We will confirm your appointment shortly.');
+            this.reset();
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
